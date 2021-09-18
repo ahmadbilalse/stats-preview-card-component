@@ -1,0 +1,161 @@
+:root {
+    --color-main-bg: hsl(233, 47%, 7%);
+    --color-card-bg: hsl(244, 38%, 16%);
+    --color-accent: hsl(277, 64%, 61%);
+    --color-overlay: rgb(106, 5, 168);
+    --color-neutral-1: hsl(0, 0%, 100%);
+    --color-neutral-2: hsla(0, 0%, 100%, 0.75);
+    --color-neutral-3: hsla(0, 0%, 100%, 0.6);
+
+    --font-1: 'Inter', sans-serif;
+    --font-2: 'Lexend Deca', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: var(--font-1);
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 1.5rem;
+    background-color: var(--color-main-bg);
+}
+
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--color-card-bg);
+}
+
+.hero-container {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: var(--color-overlay)
+}
+
+.card__content {
+    padding: 2rem;
+}
+
+.hero-header {
+    font-size: 1.5rem;
+    color: var(--color-neutral-1);
+    margin: 0;
+}
+
+.hero-description {
+    color: var(--color-neutral-2);
+    /* font-family: var(--font-2); */
+    font-size: 0.8rem;
+    line-height: 1.8;
+}
+
+.accent-text {
+    color: var(--color-accent);
+}
+
+.stats {
+    color: var(--color-neutral-3);
+    list-style: none;
+    padding: 0;
+}
+
+.stats__item {
+    padding: 1rem 0;
+}
+
+.stats__item-stat {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2;
+    color: var(--color-neutral-1);
+}
+
+.stats__item-heading {
+    font-family: var(--font-2);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--color-neutral-2);
+    padding: 1rem 0;
+}
+
+.attribution a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    .hero-header {
+        font-size: 1.82rem;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        text-align: left;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-container {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card__content {
+        float: left;
+        padding: 4rem;
+        padding-right: 3rem;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+    }
+}
