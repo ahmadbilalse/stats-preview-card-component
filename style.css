@@ -24,7 +24,9 @@ html {
 body {
     margin: 0;
     padding: 1.5rem;
+    padding-bottom: 3rem;
     background-color: var(--color-main-bg);
+    position: relative;
 }
 
 .card {
@@ -101,6 +103,10 @@ body {
     text-align: center;
     color: var(--color-neutral-2);
     padding: 1rem 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .attribution a {
